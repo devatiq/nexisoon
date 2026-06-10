@@ -61,16 +61,11 @@ No. All free templates are bundled inside the plugin.
 
 == Changelog ==
 
-= 1.0.1 =
-* Refined admin template selection with preview cards.
 
 = 1.0.0 =
 * Initial free release.
 
 == Upgrade Notice ==
-
-= 1.0.1 =
-Improved admin template selection UI.
 
 = 1.0.0 =
 Initial free release.
