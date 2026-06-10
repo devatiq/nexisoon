@@ -52,12 +52,7 @@ Yes. Maintenance Mode sends HTTP 503 and a Retry-After header. Coming Soon and U
 
 No. All free templates are bundled inside the plugin.
 
-== Screenshots ==
 
-1. NexiSoon settings page.
-2. Classic Centered template.
-3. Minimal Launch template.
-4. Bold Countdown template.
 
 == Changelog ==
 
