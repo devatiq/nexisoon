@@ -130,15 +130,26 @@ class NexiSoon_Frontend {
 	/**
 	 * Register and enqueue frontend assets for the standalone NexiSoon page.
 	 *
-	 * @param bool $has_countdown Whether the countdown script is needed.
+	 * @param bool  $has_countdown Whether the countdown script is needed.
+	 * @param array $settings      Current settings.
 	 * @return void
 	 */
-	private function enqueue_frontend_assets( $has_countdown ) {
+	private function enqueue_frontend_assets( $has_countdown, $settings ) {
 		wp_enqueue_style(
 			'nexisoon-frontend',
 			$this->assets->get_frontend_style_url(),
 			array(),
 			NEXISOON_VERSION
+		);
+
+		wp_add_inline_style(
+			'nexisoon-frontend',
+			sprintf(
+				':root{--nexisoon-background:%1$s;--nexisoon-text:%2$s;--nexisoon-button:%3$s;}',
+				esc_html( $settings['background_color'] ),
+				esc_html( $settings['text_color'] ),
+				esc_html( $settings['button_color'] )
+			)
 		);
 
 		if ( $has_countdown ) {
@@ -167,7 +178,7 @@ class NexiSoon_Frontend {
 		$is_maintenance = 'maintenance' === $settings['mode'];
 		$has_countdown  = ! empty( $settings['countdown_enabled'] ) && ! empty( $settings['countdown_datetime'] );
 
-		$this->enqueue_frontend_assets( $has_countdown );
+		$this->enqueue_frontend_assets( $has_countdown, $settings );
 
 		?>
 		<!doctype html>
@@ -186,13 +197,6 @@ class NexiSoon_Frontend {
 				<link rel="icon" href="<?php echo esc_url( $favicon_url ); ?>">
 			<?php endif; ?>
 			<?php wp_print_styles( array( 'nexisoon-frontend' ) ); ?>
-			<style>
-				:root {
-					--nexisoon-background: <?php echo esc_html( $settings['background_color'] ); ?>;
-					--nexisoon-text: <?php echo esc_html( $settings['text_color'] ); ?>;
-					--nexisoon-button: <?php echo esc_html( $settings['button_color'] ); ?>;
-				}
-			</style>
 			<?php do_action( 'nexisoon_head' ); ?>
 		</head>
 		<body class="nexisoon-body nexisoon-template-<?php echo esc_attr( $settings['template'] ); ?>">

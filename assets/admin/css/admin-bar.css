@@ -1,0 +1,20 @@
+#wpadminbar #wp-admin-bar-nexisoon-active-notice > .ab-item {
+	background: #2271b1 !important;
+	color: #fff !important;
+	font-weight: 700 !important;
+}
+
+#wpadminbar #wp-admin-bar-nexisoon-active-notice:hover > .ab-item,
+#wpadminbar #wp-admin-bar-nexisoon-active-notice > .ab-item:focus {
+	background: #135e96 !important;
+	color: #fff !important;
+}
+
+#wpadminbar #wp-admin-bar-nexisoon-active-notice.nexisoon-admin-bar-maintenance > .ab-item {
+	background: #d63638 !important;
+}
+
+#wpadminbar #wp-admin-bar-nexisoon-active-notice.nexisoon-admin-bar-maintenance:hover > .ab-item,
+#wpadminbar #wp-admin-bar-nexisoon-active-notice.nexisoon-admin-bar-maintenance > .ab-item:focus {
+	background: #b32d2e !important;
+}

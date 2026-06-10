@@ -36,8 +36,8 @@ class NexiSoon_Admin {
 		add_action( 'admin_menu', array( $this, 'add_admin_menu' ) );
 		add_action( 'wp_ajax_nexisoon_save_settings', array( $this, 'ajax_save_settings' ) );
 		add_action( 'admin_bar_menu', array( $this, 'add_admin_bar_active_notice' ), 100 );
-		add_action( 'admin_head', array( $this, 'render_admin_bar_styles' ) );
-		add_action( 'wp_head', array( $this, 'render_admin_bar_styles' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_bar_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_admin_bar_styles' ) );
 		add_filter( 'plugin_action_links_' . NEXISOON_PLUGIN_BASENAME, array( $this, 'add_plugin_action_links' ) );
 	}
 
@@ -121,32 +121,21 @@ class NexiSoon_Admin {
 	}
 
 	/**
-	 * Render scoped admin bar styles for the NexiSoon active notice.
+	 * Enqueue scoped admin bar styles for the NexiSoon active notice.
 	 *
 	 * @return void
 	 */
-	public function render_admin_bar_styles() {
+	public function enqueue_admin_bar_styles() {
 		if ( ! $this->should_show_admin_bar_notice() ) {
 			return;
 		}
 
-		$settings = $this->settings->get();
-		$color    = 'maintenance' === $settings['mode'] ? '#d63638' : '#2271b1';
-		$hover    = 'maintenance' === $settings['mode'] ? '#b32d2e' : '#135e96';
-		?>
-		<style id="nexisoon-admin-bar-styles">
-			#wp-admin-bar-nexisoon-active-notice > .ab-item {
-				background: <?php echo esc_html( $color ); ?> !important;
-				color: #fff !important;
-				font-weight: 700 !important;
-			}
-			#wp-admin-bar-nexisoon-active-notice:hover > .ab-item,
-			#wp-admin-bar-nexisoon-active-notice > .ab-item:focus {
-				background: <?php echo esc_html( $hover ); ?> !important;
-				color: #fff !important;
-			}
-		</style>
-		<?php
+		wp_enqueue_style(
+			'nexisoon-admin-bar',
+			NEXISOON_PLUGIN_URL . 'assets/admin/css/admin-bar.css',
+			array(),
+			NEXISOON_VERSION
+		);
 	}
 
 	/**
@@ -497,7 +486,10 @@ class NexiSoon_Admin {
 					</tr>
 					<tr>
 						<th scope="row"><label for="nexisoon_footer_text"><?php esc_html_e( 'Footer text', 'nexisoon' ); ?></label></th>
-						<td><textarea class="large-text" rows="3" id="nexisoon_footer_text" name="nexisoon_settings[footer_text]"><?php echo esc_textarea( $settings['footer_text'] ); ?></textarea></td>
+						<td>
+							<textarea class="large-text" rows="3" id="nexisoon_footer_text" name="nexisoon_settings[footer_text]"><?php echo esc_textarea( $settings['footer_text'] ); ?></textarea>
+							<p class="description"><?php esc_html_e( 'Optional. Leave blank to hide footer text or add your own credit/message.', 'nexisoon' ); ?></p>
+						</td>
 					</tr>
 				</tbody>
 			</table>

@@ -26,9 +26,6 @@ msgstr ""
 msgid "Learn More"
 msgstr ""
 
-msgid "Powered by NexiSoon"
-msgstr ""
-
 msgid "Under Construction"
 msgstr ""
 
@@ -138,6 +135,9 @@ msgid "Button URL"
 msgstr ""
 
 msgid "Footer text"
+msgstr ""
+
+msgid "Optional. Leave blank to hide footer text or add your own credit/message."
 msgstr ""
 
 msgid "Countdown"
