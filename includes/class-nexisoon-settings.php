@@ -17,11 +17,6 @@ class NexiSoon_Settings {
 	const OPTION_NAME = 'nexisoon_settings';
 
 	/**
-	 * Legacy option name used for one-time migration.
-	 */
-	const LEGACY_OPTION_NAME = 'soonify_settings';
-
-	/**
 	 * Return default plugin settings.
 	 *
 	 * @return array
@@ -46,7 +41,7 @@ class NexiSoon_Settings {
 			'background_color'    => '#111827',
 			'text_color'          => '#ffffff',
 			'button_color'        => '#2563eb',
-			'footer_text'         => __( 'Powered by NexiSoon', 'nexisoon' ),
+			'footer_text'         => '',
 		);
 	}
 
@@ -77,36 +72,11 @@ class NexiSoon_Settings {
 	}
 
 	/**
-	 * Migrate legacy settings when NexiSoon settings do not exist yet.
-	 *
-	 * @return void
-	 */
-	public static function migrate_legacy_settings() {
-		if ( false !== get_option( self::OPTION_NAME, false ) ) {
-			return;
-		}
-
-		$legacy_settings = get_option( self::LEGACY_OPTION_NAME, false );
-
-		if ( is_array( $legacy_settings ) ) {
-			$legacy_default_footer = 'Powered by ' . 'Soon' . 'ify';
-
-			if ( isset( $legacy_settings['footer_text'] ) && $legacy_default_footer === $legacy_settings['footer_text'] ) {
-				$legacy_settings['footer_text'] = __( 'Powered by NexiSoon', 'nexisoon' );
-			}
-
-			update_option( self::OPTION_NAME, $legacy_settings );
-		}
-	}
-
-	/**
 	 * Get merged settings.
 	 *
 	 * @return array
 	 */
 	public function get() {
-		self::migrate_legacy_settings();
-
 		$saved = get_option( self::OPTION_NAME, array() );
 
 		if ( ! is_array( $saved ) ) {

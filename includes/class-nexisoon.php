@@ -65,8 +65,6 @@ class NexiSoon {
 	 * @return void
 	 */
 	public static function activate() {
-		NexiSoon_Settings::migrate_legacy_settings();
-
 		if ( false === get_option( NexiSoon_Settings::OPTION_NAME, false ) ) {
 			add_option( NexiSoon_Settings::OPTION_NAME, NexiSoon_Settings::get_defaults() );
 		}
@@ -76,8 +74,6 @@ class NexiSoon {
 	 * Constructor.
 	 */
 	private function __construct() {
-		NexiSoon_Settings::migrate_legacy_settings();
-
 		$this->settings = new NexiSoon_Settings();
 		$this->assets   = new NexiSoon_Assets();
 		$this->admin    = new NexiSoon_Admin( $this->settings );
