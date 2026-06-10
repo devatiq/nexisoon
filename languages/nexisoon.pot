@@ -1,0 +1,337 @@
+# Copyright (C) 2026 Nexiby LLC
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: NexiSoon 1.0.0\n"
+"Report-Msgid-Bugs-To: https://nexiby.com/nexisoon\n"
+"POT-Creation-Date: 2026-06-04 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: NexiSoon\n"
+"X-Domain: nexisoon\n"
+
+msgid "Coming Soon"
+msgstr ""
+
+msgid "Our new website is launching soon."
+msgstr ""
+
+msgid "We are launching soon"
+msgstr ""
+
+msgid "Our new website is on the way. Stay tuned for something amazing."
+msgstr ""
+
+msgid "Learn More"
+msgstr ""
+
+msgid "Powered by NexiSoon"
+msgstr ""
+
+msgid "Under Construction"
+msgstr ""
+
+msgid "Maintenance Mode"
+msgstr ""
+
+msgid "Classic Centered"
+msgstr ""
+
+msgid "Minimal Launch"
+msgstr ""
+
+msgid "Bold Countdown"
+msgstr ""
+
+msgid "Select logo"
+msgstr ""
+
+msgid "Use this logo"
+msgstr ""
+
+msgid "Select favicon"
+msgstr ""
+
+msgid "Use this favicon"
+msgstr ""
+
+msgid "Saving..."
+msgstr ""
+
+msgid "Settings saved."
+msgstr ""
+
+msgid "Unable to save settings. Please try again."
+msgstr ""
+
+msgid "Not selected"
+msgstr ""
+
+msgid "NexiSoon"
+msgstr ""
+
+msgid "You do not have permission to access this page."
+msgstr ""
+
+msgid "Create a temporary frontend page while your real website stays available to administrators."
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Enable NexiSoon"
+msgstr ""
+
+msgid "Show the NexiSoon page to public visitors."
+msgstr ""
+
+msgid "Mode type"
+msgstr ""
+
+msgid "Template"
+msgstr ""
+
+msgid "Template selector"
+msgstr ""
+
+msgid "Branding"
+msgstr ""
+
+msgid "Logo"
+msgstr ""
+
+msgid "Select Logo"
+msgstr ""
+
+msgid "Remove Logo"
+msgstr ""
+
+msgid "Favicon"
+msgstr ""
+
+msgid "Select Favicon"
+msgstr ""
+
+msgid "Remove Favicon"
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Heading text"
+msgstr ""
+
+msgid "Subheading text"
+msgstr ""
+
+msgid "Button"
+msgstr ""
+
+msgid "Enable button"
+msgstr ""
+
+msgid "Button text"
+msgstr ""
+
+msgid "Button URL"
+msgstr ""
+
+msgid "Footer text"
+msgstr ""
+
+msgid "Countdown"
+msgstr ""
+
+msgid "Countdown timer"
+msgstr ""
+
+msgid "Enable countdown timer"
+msgstr ""
+
+msgid "Countdown date/time"
+msgstr ""
+
+msgid "SEO"
+msgstr ""
+
+msgid "SEO meta title"
+msgstr ""
+
+msgid "SEO meta description"
+msgstr ""
+
+msgid "Styling"
+msgstr ""
+
+msgid "Background color"
+msgstr ""
+
+msgid "Text color"
+msgstr ""
+
+msgid "Button color"
+msgstr ""
+
+msgid "Save Settings"
+msgstr ""
+
+msgid "Live Preview"
+msgstr ""
+
+msgid "Selected logo"
+msgstr ""
+
+msgid "00 days 00 hours 00 minutes"
+msgstr ""
+
+msgid "Security check failed. Please refresh the page and try again."
+msgstr ""
+
+msgid "You do not have permission to save these settings."
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Seconds"
+msgstr ""
+
+
+
+msgid "NexiSoon Dashboard"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "NexiSoon Settings"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "NexiSoon settings tabs"
+msgstr ""
+
+
+
+msgid "Control your site visibility"
+msgstr ""
+
+msgid "Turn NexiSoon on when public visitors should see your temporary page instead of the live website."
+msgstr ""
+
+msgid "When disabled, NexiSoon does not affect the frontend."
+msgstr ""
+
+msgid "Coming Soon and Under Construction return HTTP 200. Maintenance Mode returns HTTP 503."
+msgstr ""
+
+msgid "Administrator bypass is always enabled."
+msgstr ""
+
+msgid "Logged-in administrators with the manage_options capability continue to see the real website while public visitors see NexiSoon."
+msgstr ""
+
+msgid "Choose a bundled template"
+msgstr ""
+
+msgid "All free templates are included locally in the plugin."
+msgstr ""
+
+msgid "Balanced centered layout with a polished card."
+msgstr ""
+
+msgid "Clean editorial layout with left-aligned content."
+msgstr ""
+
+msgid "High-impact layout built around the countdown."
+msgstr ""
+
+msgid "Add your visual identity"
+msgstr ""
+
+msgid "Use media from your WordPress library. Uploaded files remain in the media library if NexiSoon is deleted."
+msgstr ""
+
+msgid "Displayed above the main heading."
+msgstr ""
+
+msgid "Used as the browser tab icon on the NexiSoon page."
+msgstr ""
+
+msgid "Write your visitor message"
+msgstr ""
+
+msgid "Build launch anticipation"
+msgstr ""
+
+msgid "Countdown display style"
+msgstr ""
+
+msgid "Boxes"
+msgstr ""
+
+msgid "Inline"
+msgstr ""
+
+msgid "This setting currently updates the admin preview and prepares the option for future template controls."
+msgstr ""
+
+msgid "Control temporary page metadata"
+msgstr ""
+
+msgid "Robots behavior"
+msgstr ""
+
+msgid "Coming Soon and Under Construction can be indexed normally. Maintenance Mode automatically adds noindex, nofollow to protect temporary outage pages from indexing."
+msgstr ""
+
+msgid "Match your brand colors"
+msgstr ""
+
+msgid "Live admin preview"
+msgstr ""
+
+msgid "This preview updates as you change fields across the tabs."
+msgstr ""
+
+msgid "Preview NexiSoon Page"
+msgstr ""
+
+msgid "NexiSoon Preview"
+msgstr ""
+
+msgid "Select a template from the previews"
+msgstr ""
+
+msgid "Choose one of the three bundled layouts. Click a preview card to make it the active NexiSoon template."
+msgstr ""
+
+msgid "Selected"
+msgstr ""
+
+msgid "Select template"
+msgstr ""
+
+msgid "NexiSoon: Coming Soon Active"
+msgstr ""
+
+msgid "NexiSoon: Under Construction Active"
+msgstr ""
+
+msgid "NexiSoon: Maintenance Active"
+msgstr ""
